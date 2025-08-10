@@ -13,25 +13,21 @@ def template(site_name: str, main_nav: list, sidebar_title: str, sidebar_items: 
         def template():
             return rx.box(
                 navbar(site_name, main_nav),
-                rx.box(
-                    sidebar(sidebar_title, sidebar_items),
-                    rx.scroll_area(
+                rx.scroll_area(
+                    rx.box(
+                        sidebar(sidebar_title, sidebar_items),
                         rx.box(
-                            rx.box(
-                                content(),
-                                class_name="flex flex-col w-full max-lg:max-w-[60rem] mx-auto pt-8 px-4 min-h-screen justify-between",
-                            ),
-                            table_of_content(toc),
-                            class_name="items-start relative flex flex-row gap-x-0",
+                            content(),
+                            class_name="flex w-full pt-8 lg:pr-16 min-h-screen",
                         ),
-                        class_name="pt-12 h-screen w-full overflow-y-auto [&_.rt-ScrollAreaScrollbar]:mt-[4rem] [&_.rt-ScrollAreaScrollbar]:mb-[1rem]",
+                        table_of_content(toc),
+                        class_name="w-full max-w-[75rem] mx-auto h-full flex flex-row gap-x-0",
                     ),
-                    class_name="w-full h-screen flex flex-row gap-x-0",
+                    class_name="px-4 xl:px-0 pt-12 h-screen w-full overflow-y-auto [&_.rt-ScrollAreaScrollbar]:mt-[4rem] [&_.rt-ScrollAreaScrollbar]:mb-[1rem]",
                 ),
                 bg=rx.color('slate', 2),
                 class_name="w-full h-screen flex flex-col gap-y-0",
             )
-
         return template
 
     return decorator
