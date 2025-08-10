@@ -1,0 +1,16 @@
+site_name: My Example Site
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Introduction: intro.md
+      - Installation: install.md
+      - Quickstart: quickstart.md
+  - Tutorials:
+      - Beginner Tutorial: beginner-tutorial.md
+      - Intermediate Tutorial: intermediate-tutorial.md
+      - Expert Tutorial: expert-tutorial.md
+  - API Reference:
+      - Overview: api-overview.md
+      - Authentication: api-authentication.md
+      - Data Access: api-data-access.md
+  - About: about.md
