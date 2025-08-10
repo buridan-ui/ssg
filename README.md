@@ -54,3 +54,8 @@ To create a new page, simply add a new Markdown file (`.md`) to the `sandbox/app
 *   `sandbox/`: A sample project using the SSG.
     *   `app/`: The application logic for the sandbox project.
     *   `pages/`: The content for the sandbox site.
+
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
