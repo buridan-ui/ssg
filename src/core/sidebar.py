@@ -30,9 +30,8 @@ def sidebar(sidebar_title: str, sidebar_items: dict | str | None):
 
     # Return empty sidebar if no valid items provided
     if not (isinstance(sidebar_items, dict) and sidebar_items):
-        return rx.scroll_area(
-            height="100vh",
-            class_name=SIDEBAR_CLASSES,
+        return rx.box(
+            class_name="hidden xl:flex w-full max-w-52 sticky top-0 max-h-[90vh]"
         )
 
     # Generate navigation links from sidebar items

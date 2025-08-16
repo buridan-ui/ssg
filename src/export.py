@@ -163,6 +163,7 @@ def export_app(app: rx.App):
                 for title, value in item.items():
                     if isinstance(value, list):
                         folder_name = title.lower().replace(" ", "_")
+                        create_page(base_parts + [folder_name, "index.md"])
                         process_nav(value, base_parts + [folder_name])
                     elif isinstance(value, str):
                         create_page(base_parts + [value])
@@ -173,6 +174,7 @@ def export_app(app: rx.App):
             else:
                 logger.warning(f"[export] Unexpected nav item type {type(item)}: {item}")
 
+    create_page(["index.md"])
     process_nav(nav)
 
     _clean_nav = clean_nav(nav, exclude_files)
